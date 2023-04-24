@@ -2,18 +2,28 @@
 <html lang="ko">
 	<head>
 		<meta charset = "UTF-8">
-		<title>JQuery Intro</title>
+		<title>JQuery Ajax Method</title>
 		<script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script>
 			$(function(){
-				$("p").on("click", function(){
-					$("p").css("color", "red");
-				});
+				$("#requestBtn").on("click", function(){
+					$.ajax("/examples/media/request_ajax.php")
+					.done(function(){
+						alert("요청 성공");
+					})
+					.fail(function(){
+						alert("요청 실패");
+					})
+					.always(function(){
+						alert("요청 완료");
+					})
+				})
 			})
 		</script>
 	</head>
 	<body>
-		<p>이제부터 제이쿼리를 다 같이 공부합세!<br>
-		마우스로 글씨를 클릭해보세요!!</p>
+		<h1>$.ajax() method</h1>
+		<button id = "requestBtn">$.ajax() method</button>
+		<p id = "text"></p>
 	</body>
 </html>
