@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset = "UTF-8">
+		<title>JQuery Element Insert</title>
+		<script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<style>
+			table, tr, td{
+				border : 2px solid red;
+				border-collapse: collapse;
+			}
+			table{margin-bottom : 15px}
+		</style>
+		<script>
+			$(function(){
+				$("button").on("click", function(){
+					$("#firstRow").before("<tr><td>새로운 행입니다!</td><td>새로운 두번째 행입니다!</td></tr>");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>.before() method</h1>
+		<table>
+			<tr id = "firstRow">
+				<td>첫 번째 셀이에요!</td>
+				<td>두 번째 셀이에요!</td>
+			</tr>
+		</table>
+		<button>행 추가</button>
+	</body>
+</html>

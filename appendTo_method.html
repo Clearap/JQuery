@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset = "UTF-8">
+		<title>JQuery Element Insert</title>
+		<script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			$(function(){
+				$("#firstBtn").on("click", function(){
+					$("#firstitem").appendTo("#list");
+				});
+				$("#secondBtn").on("click", function(){
+					$("#seconditem").appendTo("#list");
+				});
+				$("#thirdBtn").on("click", function(){
+					$("#thirditem").appendTo("#list");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<h1>.appendTo() method</h1>
+		<p>아래 버튼들을 왼쪽부터 차례대로 눌러보세요</p>
+		<ul id = "list">
+			<li id = "firstitem">첫 번째 아이템이에요!</li>
+			<li id = "seconditem">두 번째 아이템이에요!</li>
+			<li id = "thirditem">세 번째 아이템이에요!</li>
+		</ul>
+		<button id = "firstBtn">첫 번째 아이템 추가</button>
+		<button id = "secondBtn">두 번째 아이템 추가</button>
+		<button id = "thirdBtn">세 번째 아이템 추가</button>
+	</body>
+</html>
